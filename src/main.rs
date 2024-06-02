@@ -1,6 +1,7 @@
 use std::io::Write;
 mod degc_degf;
 mod error_msg;
+mod fibonacci;
 
 fn main() {
     print!("Hello, World!\n\n");
@@ -25,12 +26,20 @@ fn main() {
                 }
             },
 
+            "2" => 'module: loop {
+                if !fibonacci::run_module() {
+                    break 'module;
+                }
+            },
+
             "q" => {
                 println!("\n[EXITING...]");
                 break 'crankshaft;
             }
 
-            _ => print!("Invalid choice, try again!\n\n"),
+            _ => println!("Invalid choice, try again!"),
         }
+
+        println!();
     }
 }
