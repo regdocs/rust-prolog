@@ -34,10 +34,10 @@ pub fn run_module() -> bool {
             let degf = degf.trim().parse::<f64>().expect(error_msg::FAILED_TO_PARSE_INTEGER);
             let degc = to_celsius(degf);
             println!(
-                "{} deg Fahrenheit is equivalent to {} deg Celsius\n",
+                "{} deg Fahrenheit is equivalent to {} deg Celsius",
                 degf, degc
             );
-            false
+            true
         }
 
         "2" => {
@@ -50,20 +50,20 @@ pub fn run_module() -> bool {
             let degc = degc.trim().parse::<f64>().expect(error_msg::FAILED_TO_PARSE_INTEGER);
             let degf = to_fahrenheit(degc);
             println!(
-                "{:.1} deg Celsius is equivalent to {:.1} deg Fahrenheit\n",
+                "{:.1} deg Celsius is equivalent to {:.1} deg Fahrenheit",
                 degc, degf
             );
-            false
+            true
         }
 
         "b" => {
             println!("[GOING BACK...]");
-            true
+            false
         }
         
         _ => {
-            print!("Wrong choice, try again!\n\n");
-            false
+            println!("Wrong choice, try again!");
+            true
         }
     }
 }
