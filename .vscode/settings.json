@@ -4,6 +4,7 @@
     "editor.guides.indentation": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.tabWidth": 4,
+    "explorer.compactFolders": true,
     "[rust]": {
         "editor.defaultFormatter": "rust-lang.rust-analyzer",
         "editor.formatOnSave": true
