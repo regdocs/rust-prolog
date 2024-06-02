@@ -21,12 +21,14 @@ fn main() {
 
         match choice {
             "1" => 'module: loop {
+                println!();
                 if !degc_degf::run_module() {
                     break 'module;
                 }
             },
 
             "2" => 'module: loop {
+                println!();
                 if !fibonacci::run_module() {
                     break 'module;
                 }
