@@ -12,6 +12,7 @@ fn to_fahrenheit(celsius: f64) -> f64 {
 pub fn run_module() -> bool {
     println!("This is degc_degf::run_module() ->");
     println!(" 1. Convert deg Fahrenheit to deg Celsius");
+    println!(" 2. Convert deg Celsius to deg Fahrenheit");
     print!("Enter choice or `b` to go back: ");
     std::io::stdout().flush().unwrap();
 
